@@ -1,0 +1,104 @@
+/* Smooth animated gradient background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Animation for gradient */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Contact form container */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px 35px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+  width: 350px;
+  color: #fff;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.8em;
+  background: linear-gradient(90deg, #ff6ec4, #facc15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+.subtitle {
+  text-align: center;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  color: #eee;
+}
+
+/* Input and textarea */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+/* Input hover/focus effect */
+input:focus, textarea:focus {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(255, 110, 196, 0.6);
+  transform: scale(1.02);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+  background: linear-gradient(90deg, #7873f5, #4ade80);
+  transform: scale(1.05);
+}
+
+/* Response message */
+#responseMessage {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9em;
+}
